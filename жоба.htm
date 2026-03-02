@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Мұғалімнің жеке шеберханасы</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #00f2fe, #4facfe);
+  color: white;
+  padding: 40px;
+  transition: 0.3s;
+}
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+h1 {
+  text-align: center;
+}
+a {
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+button {
+  position: fixed;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  z-index: 999;
+}
+#darkBtn {
+  top: 20px;
+  right: 20px;
+  background: black;
+}
+#langBtn {
+  top: 70px;
+  right: 20px;
+  background: #0072ff;
+}
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.image-box {
+  width: 45%;
+  text-align: center;
+}
+.image-box img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.quote {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 16px;
+  min-height: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-box {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<button id="darkBtn" onclick="toggleDark()">🌙 Dark</button>
+<button id="langBtn" onclick="toggleLang()">🌐 KZ</button>
+<h1 id="mainTitle">Мұғалімнің жеке шеберханасы</h1>
+
+<!-- Фото бөлімі -->
+<div class="top-section">
+  <div class="image-box">
+    <img src="C:\Users\inat\Downloads\Новая папка\9.jpg" alt="Мұғалім">
+    <div class="quote" id="quote1">"Білім – қуат, ал еңбек – бұл білімнің дәні."</div>
+  </div>
+
+  <div class="image-box">
+    <div class="quote" id="quote2">"Оқыту – бұл тек ақпаратты беру ғана емес, сонымен қатар, оны игеруге үйрету."</div>
+  </div>
+</div>
+
+<h2>Сабақ процесі</h2>
+<a href="C:\Users\inat\Downloads\Новая папка\1.mp4">Видеолар 1</a>
+<a href="C:\Users\inat\Downloads\Новая папка\2.mp4">Видеолар 2</a>
+<a href="C:\Users\inat\Downloads\Новая папка\3.mp4">Видеолар 3</a>
+<a href="C:\Users\inat\Downloads\Новая папка\4.mp4">Видеолар 4</a>
+<a href="C:\Users\inat\Downloads\Новая папка\5.mp4">Видеолар 5</a>
+
+<p>Сабақ барысында ЖИ арқылы істелінген видеолар:</p>
+<a href="C:\Users\inat\Downloads\Новая папка\6.mp4">Видеолар 1</a>
+<a href="C:\Users\inat\Downloads\Новая папка\7.mp4">Видеолар 2</a>
+<a href="C:\Users\inat\Downloads\Новая папка\8.mp4">Видеолар 3</a>
+
+<h2>Ойындар</h2>
+<a href="https://xn--80aaaabc2e9e68a.my.canva.site/">Ойын 1</a>
+<a href="https://xn--80aaaabc2e9e68a.my.canva.site/c29zjnrjne4tq8ks">Ойын 2</a>
+<a href="https://xn--80aaaabc2e9e68a.my.canva.site/c29hqj3rh0jwt63q">Ойын 3</a>
+<a href="https://xn--80aaad2fwbv45deaa.my.canva.site/c2efeax063e8sfr2">Ойын 4</a>
+<a href="https://xn--80aaaabc2e9e68a.my.canva.site/c29yx57t3tgrb1x4">Ойын 5</a>
+
+<h2>Презентация</h2>
+<a href="C:\Users\inat\Downloads\Новая папка\Секция_Мектепке_дейінгі_тәрбие_мен_білім_беру_ұйымдарының_тәрбиешілері.pptx">Презентация сыллка</a>
+
+<script>
+let dark = false;
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  dark = !dark;
+  document.getElementById("darkBtn").innerText = dark ? "☀ Light" : "🌙 Dark";
+}
+let lang = "kz";
+function toggleLang() {
+  if (lang === "kz") {
+    lang = "ru"; // Для примера, переключение на русский
+    // Здесь можно добавить логику для перевода текста на русский язык
+  } else {
+    lang = "kz"; // Вернуться на казахский
+  }
+}
+</script>
+</body>
+</html>
